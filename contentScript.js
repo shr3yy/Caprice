@@ -58,7 +58,7 @@ caprice.appendChild(input);
 //  save btn
 
 var saveBtn = document.createElement('button');
-saveBtn.style.cssText = "position: absolute;top : 260px; bottom : 10px; left : 7.5px; width: 182px; height: 30px;background: #FFF5F5;border-radius: 5px;"
+saveBtn.style.cssText = "position: absolute;top : 260px !important; bottom : 10px !important; right : 58px !important; width: 130px; height: 30px;background: #FFF5F5;border-radius: 5px;&nbsp;&nbsp;"
 saveBtn.innerText = "Save"
 saveBtn.addEventListener("click", ()=>{
 
@@ -71,6 +71,14 @@ saveBtn.addEventListener("click", ()=>{
 })
 caprice.appendChild(saveBtn);
 
+var home = document.createElement("button");
+home.style.cssText = "position: absolute;top : 260 px !important; bottom : 10px !important; right : 17px !important; width: 32px !important; height: 30px;background: #FFF5F5; border-radius: 3px;"
+caprice.appendChild(home)
+home.addEventListener("click" ,() => {
+
+    //
+
+} )
 
 // eventlistener for add button
 
