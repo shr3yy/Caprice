@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>Caprice</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+    rel="stylesheet">
+</head>
+<body id="body" class="light">
+  <div class="dd-hero">
+    <div class="container">
+      <!-- Header -->
+      <header class="dd-header">
+        <!-- Logo -->
+        <a href="index.html" class="dd-logo">Logo</a>
+      </header>
+      <div class="box">
+        <span dd-toggle="theme" class="df">
+          <div id="toggle_theme" class="dd-theme__switcher">
+            <span class="dd-theme__switcher-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" class="dd-icon icon-tabler icon-tabler-sun" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <circle cx="12" cy="12" r="4" />
+                <path d="M3 12h1M12 3v1M20 12h1M12 20v1M5.6 5.6l.7 .7M18.4 5.6l-.7 .7M17.7 17.7l.7 .7M6.3 17.7l-.7 .7" />
+              </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" class="dd-icon icon-tabler icon-tabler-moon" width="24" height="24"
+                viewBox="0 0 24 24" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" />
+                <path d="M16.2 4a9.03 9.03 0 1 0 3.9 12a6.5 6.5 0 1 1 -3.9 -12" />
+              </svg>
+            </span>
+          </div>
+          &nbsp;<label class="box-lbl" for="toggle_theme"><strong>Toggle Ligth/Dark Theme</strong></label>
+        </span>&nbsp;| Or |&nbsp;
+        <label dd-theme="solarized" class="theme--label">
+          <span></span>Solarized color theme
+        </label>&nbsp;
+        <label dd-theme="pt" class="theme--label">
+          <span></span>Pink-Teal color theme
+        </label>&nbsp;
+        <label dd-theme="blue" class="theme--label">
+          <span></span>Blue color theme
+        </label>&nbsp;
+        <label dd-theme="yp" class="theme--label">
+          <span></span>Yellow-Purple color theme
+        </label>&nbsp;
+      </div>
+      <br />
+      <h2 class="title">Welcome, Here are your pins</h2>
+      <br />
+      <div class="grid grid-3 gutter">
+        <div class="card">
+          <h2 class="card__title">Card Title</h2>
+          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium, et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
+        </div>
+        <div class="card">
+          <h2 class="card__title">Card Title</h2>
+          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
+          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
+        </div>
+        <div class="card">
+          <h2 class="card__title">Card Title</h2>
+          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
+          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
+        </div><div class="card">
+          <h2 class="card__title">Card Title</h2>
+          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
+          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <script>
+    // Set the theme from localStorage(if exist) || or set default light
+    let theme = window.localStorage.getItem('theme') || 'light';
+    // Activate the current theme (using class)
+    body.classList = theme;
+    // Or Activate the current theme (using attribute)
+    // body.setAttribute('color-theme', theme);
+    // Available Themes
+    let available_themes = document.querySelectorAll('[dd-theme]');
+    /** Light / Dark theme Toggle */
+    // Toggle Dark / Light theme
+    let _toggler = document.querySelector('[dd-toggle]');
+    _toggler.addEventListener('click', toggleTheme);
+    // Function: toggle theme(light & dark)
+    function toggleTheme() {
+      // Toggle light / dark theme
+      ( theme == 'light' ? theme = 'dark' : theme = 'light');
+      // Apply class to body (using class)
+      body.classList = theme;
+      // Apply class to body (using attribute)
+      // body.setAttribute('color-theme', theme);
+      // Store theme var to localStorage
+      window.localStorage.setItem('theme', theme );
+      // Disable other themes
+      available_themes.forEach(e => {
+        e.classList = 'theme--label';
+      });
+    }
+    /* --- X --- */
+
+    /** Switch Theme **/
+    available_themes.forEach(e => {
+      ( window.localStorage.getItem('theme') == e.getAttribute('dd-theme') ? e.classList.add('active') : null );
+      e.addEventListener('click', switchTheme);
+    });
+    function switchTheme() {
+      available_themes.forEach(e => {
+        e.classList = 'theme--label';
+      });
+      let theme = this.getAttribute('dd-theme');
+      this.classList.add('active');
+      // Activate the theme(using class)
+      body.classList = theme;
+      // Activate the theme(attribute class)
+      // body.setAttribute('color-theme', theme);
+      window.localStorage.setItem('theme', theme);
+    }
+    /* --- X --- */
+
+  </script>
+</body>
+</html>
