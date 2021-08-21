@@ -11,7 +11,6 @@ toggle.addEventListener("change", () => {
     if(toggle.checked){
         localStorage.setItem("caprice_status", "false");
         console.log(toggle.checked)
-        chrome.runtime.sendMessage({message : "hide"})
     }else{
         localStorage.setItem("caprice_status", "true");
         console.log(toggle.checked)
