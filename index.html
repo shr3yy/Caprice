@@ -52,78 +52,15 @@
       <br />
       <h2 class="title">Welcome, Here are your pins</h2>
       <br />
-      <div class="grid grid-3 gutter">
-        <div class="card">
+      <div class="grid grid-3 gutter" id="cards-container">
+        <!-- <div class="card">
           <h2 class="card__title">Card Title</h2>
           <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium, et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
-        </div>
-        <div class="card">
-          <h2 class="card__title">Card Title</h2>
-          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
-          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
-        </div>
-        <div class="card">
-          <h2 class="card__title">Card Title</h2>
-          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
-          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
-        </div><div class="card">
-          <h2 class="card__title">Card Title</h2>
-          <p class="p-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam laudantium ratione odit quis, enim dicta, accusantium,
-          et quasi assumenda nesciunt laboriosam expedita. Excepturi accusamus, commodi facilis nulla a cum atque!</p>
-        </div>
+        </div> -->
       </div>
       <br />
     </div>
   </div>
-  <script>
-    // Set the theme from localStorage(if exist) || or set default light
-    let theme = window.localStorage.getItem('theme') || 'light';
-    // Activate the current theme (using class)
-    body.classList = theme;
-    // Or Activate the current theme (using attribute)
-    // body.setAttribute('color-theme', theme);
-    // Available Themes
-    let available_themes = document.querySelectorAll('[dd-theme]');
-    /** Light / Dark theme Toggle */
-    // Toggle Dark / Light theme
-    let _toggler = document.querySelector('[dd-toggle]');
-    _toggler.addEventListener('click', toggleTheme);
-    // Function: toggle theme(light & dark)
-    function toggleTheme() {
-      // Toggle light / dark theme
-      ( theme == 'light' ? theme = 'dark' : theme = 'light');
-      // Apply class to body (using class)
-      body.classList = theme;
-      // Apply class to body (using attribute)
-      // body.setAttribute('color-theme', theme);
-      // Store theme var to localStorage
-      window.localStorage.setItem('theme', theme );
-      // Disable other themes
-      available_themes.forEach(e => {
-        e.classList = 'theme--label';
-      });
-    }
-    /* --- X --- */
-
-    /** Switch Theme **/
-    available_themes.forEach(e => {
-      ( window.localStorage.getItem('theme') == e.getAttribute('dd-theme') ? e.classList.add('active') : null );
-      e.addEventListener('click', switchTheme);
-    });
-    function switchTheme() {
-      available_themes.forEach(e => {
-        e.classList = 'theme--label';
-      });
-      let theme = this.getAttribute('dd-theme');
-      this.classList.add('active');
-      // Activate the theme(using class)
-      body.classList = theme;
-      // Activate the theme(attribute class)
-      // body.setAttribute('color-theme', theme);
-      window.localStorage.setItem('theme', theme);
-    }
-    /* --- X --- */
-
-  </script>
+  <script src="options.js"></script>
 </body>
 </html>
