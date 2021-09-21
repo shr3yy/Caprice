@@ -4,7 +4,7 @@
     <a href="https://github.com/shreyanshmalvya/Caprice" alt="webstorebadge">
         <img src="https://img.shields.io/chrome-web-store/v/ogffaloegjglncjfehdfplabnoondfjo?color=pink&logoColor=black" /></a>
     <a href="https://github.com/shreyanshmalvya/Caprice" alt="Versionbadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <img src="https://img.shields.io/github/manifest-json/v/shreyanshmalvya/caprice?color=pink&filename=manifest.json" /></a>
+        <img src="https://img.shields.io/badge/manifest-v2.0-pink" /></a>
 </p>
 
 ---
@@ -41,8 +41,8 @@ Sometimes a real gem of an idea may be hidden here or guess what you may feel mo
 
  
  <p align = "right"> Wanna Connect? <br>
-  <a href="https://dribbble.com/shr3yy"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/dribbble.png"></a>&nbsp;
-  <a href="https://www.linkedin.com/in/shr3yy/"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/linkedin.png"></a>&nbsp;
+  <a href="https://dribbble.com/shreyanshmalvya"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/dribbble.png"></a>&nbsp;
+  <a href="https://www.linkedin.com/in/shreyanshmalvya/"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/linkedin.png"></a>&nbsp;
   <a href="https://www.instagram.com/shreyanshmalvya/"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/instagram.png"></a>&nbsp;
   <a href="https://open.spotify.com/user/h1mc01zkxb1qy76ziqozb6h81"><img height="30" src="https://github.com/shr3yy/shr3yy/blob/main/assets/spotify.png"></a>&nbsp;
 </p>
