@@ -1,6 +1,6 @@
 <p align = center>
     <a href="https://github.com/shreyanshmalvya/Caprice" alt="Logo">
-        <img src="https://github.com/shreyanshmalvya/Caprice/blob/main/Asset%204.svg" width = 600px/></a><br>
+        <img src="https://github.com/shreyanshmalvya/Caprice/blob/main/logoAsset%207.png" width = 600px/></a><br>
     <a href="https://github.com/shreyanshmalvya/Caprice" alt="webstorebadge">
         <img src="https://img.shields.io/chrome-web-store/v/ogffaloegjglncjfehdfplabnoondfjo?color=pink&logoColor=black" /></a>
     <a href="https://github.com/shreyanshmalvya/Caprice" alt="Versionbadge">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
